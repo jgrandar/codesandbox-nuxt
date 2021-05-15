@@ -9,8 +9,10 @@
 export default {
   name: 'ProductoMostrar',
   async asyncData({ params, $axios }) {
-    // const respuesta = await $axios.$get(`api/${params.slug}.json`)
-    const respuesta = await $axios.$get(`https://2h2md.sse.codesandbox.io/api/${params.slug}.json`)
+    // const respuesta = await $axios.$get(`api/id/${params.id}.json`)
+    // const respuesta = await $axios.$get(`api/slug/${params.slug}.json`)
+    // const respuesta = await $axios.$get(`https://2h2md.sse.codesandbox.io/api/id/${params.id}.json`)
+    const respuesta = await $axios.$get(`https://2h2md.sse.codesandbox.io/api/slug/${params.slug}.json`)
 
     return { producto: respuesta }
   },
