@@ -19,7 +19,8 @@
 export default {
   name: 'ProductoIndice',
   async asyncData({ $axios }) {
-    const respuesta = await $axios.$get('https://2h2md.sse.codesandbox.io/productos/productos.json')
+    // const respuesta = await $axios.$get('api/listado.json')
+    const respuesta = await $axios.$get('https://2h2md.sse.codesandbox.io/api/listado.json')
 
     return { productos: respuesta.productos }
   },
